@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\nrieck\edev\llvm\llvm\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(UseDebugLibraries)'=='true'">C:\Users\nrieck\edev\llvm\build\msvc-x86_64-dbg\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(UseDebugLibraries)'!='true'">C:\Users\nrieck\edev\llvm\build\msvc-x86_64-opt\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories Condition="'$(UseDebugLibraries)'=='true'">C:\Users\nrieck\edev\llvm\build\msvc-x86_64-dbg\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(UseDebugLibraries)'!='true'">C:\Users\nrieck\edev\llvm\build\msvc-x86_64-opt\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>LLVMDebugInfoCodeView.lib;LLVMDebugInfoMSF.lib;LLVMDebugInfoPDB.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LLVMObject.lib;LLVMBitReader.lib;LLVMCore.lib;LLVMMC.lib;LLVMBinaryFormat.lib;LLVMMCParser.lib;LLVMSupport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
